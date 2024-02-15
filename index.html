@@ -19,7 +19,7 @@
       <a class="nav-link" href="#" onclick="showEducation()">Education</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#" onclick="showSkills()">Skills</a>
     </li>
   </ul>
   
@@ -70,7 +70,7 @@
     <table class="table table-striped">
       <tbody>
         <tr>
-          <td rowspan="4"><img src="images/education.png" class="rounded mx-auto d-block" alt="Education" width="200" height="200"></td>
+          <td rowspan="4"><img src="images/alan.png" class="rounded mx-auto d-block" alt="Education" width="200" height="356"></td>
           <th>Degree:</th>
           <td>Bachelor of Science in Computer Science</td>
         </tr>
@@ -89,19 +89,67 @@
       </tbody>
     </table>
   </div>
+
+  <div id="skills" style="display: none;">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages:
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>C++</li>
+        </ul>
+      </li>
+      <li>Web Development:
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </li>
+      <li>Database:
+        <ul>
+          <li>MySQL</li>
+          <li>MongoDB</li>
+          <li>SQLite</li>
+        </ul>
+      </li>
+      <li>Version Control:
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+        </ul>
+      </li>
+      <li>Other:
+        <ul>
+          <li>Problem Solving</li>
+          <li>Teamwork</li>
+          <li>Time Management</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <script>
   function showPersonalInfo() {
-    // Hide education and show personal info
-    document.getElementById('education').style.display = 'none';
     document.getElementById('personal-info').style.display = 'block';
+    document.getElementById('education').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
   }
 
   function showEducation() {
-    // Hide personal info and show education
     document.getElementById('personal-info').style.display = 'none';
     document.getElementById('education').style.display = 'block';
+    document.getElementById('skills').style.display = 'none';
+  }
+
+  function showSkills() {
+    document.getElementById('personal-info').style.display = 'none';
+    document.getElementById('education').style.display = 'none';
+    document.getElementById('skills').style.display = 'block';
   }
 </script>
 
