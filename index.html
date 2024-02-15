@@ -10,60 +10,100 @@
 <body>
 
 <div class="container mt-3">
-  <h2>This is Alan McDonald's homepage</h2><br>
+  <h2>This is Kansit Opchoei homepage</h2><br>
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Personal Info</a>
+      <a class="nav-link" href="#" onclick="showPersonalInfo()">Personal Info</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Education</a>
+      <a class="nav-link" href="#" onclick="showEducation()">Education</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Skills</a>
+      <a class="nav-link" href="#skills">Skills</a>
     </li>
   </ul>
   
-  <table class="table table-striped">
-    <thead>
-      <tr>
-		<th></th>
-        <th>&nbsp;</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-		<td rowspan="7"><img src="images/alan.png" class="rounded mx-auto d-block" alt="Alan McDonald" width="200" height="356"></td>
-        <th>Name:</th>
-        <td>Kansit</td>
-      </tr>
-      <tr>
-        <th>Surname:</th>
-        <td>Opchoei</td>
-      </tr>
-	  <tr>
-        <th>Age:</th>
-        <td>22</td>
-      </tr>
-	  <tr>
-        <th>Birthday:</th>
-        <td>13 April 2001</td>
-      </tr>
-	  <tr>
-        <th>Nationality:</th>
-        <td>Thai</td>
-      </tr>
-	  <tr>
-        <th>Current Address:</th>
-        <td>126/1 Vibhavadee-Rangsit Rd. Dindaeng BKK 10400</td>
-      </tr>
-	  <tr>
-        <th>Email Address:</th>
-        <td>2310511101083@live4.utcc.ac.th</td>
-      </tr>
-    </tbody>
-  </table>
+  <div id="personal-info">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="7"><img src="images/alan.png" class="rounded mx-auto d-block" width="200" height="356"></td>
+          <th>Name:</th>
+          <td>Kansit</td>
+        </tr>
+        <tr>
+          <th>Surname:</th>
+          <td>Opchoei</td>
+        </tr>
+        <tr>
+          <th>Age:</th>
+          <td>22</td>
+        </tr>
+        <tr>
+          <th>Birthday:</th>
+          <td>13 April 2001</td>
+        </tr>
+        <tr>
+          <th>Nationality:</th>
+          <td>Thai</td>
+        </tr>
+        <tr>
+          <th>Current Address:</th>
+          <td>126/1 Vibhavadee-Rangsit Rd. Dindaeng BKK 10400</td>
+        </tr>
+        <tr>
+          <th>Email Address:</th>
+          <td>2310511101083@live4.utcc.ac.th</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="education" style="display: none;">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td rowspan="4"><img src="images/education.png" class="rounded mx-auto d-block" alt="Education" width="200" height="200"></td>
+          <th>Degree:</th>
+          <td>Bachelor of Science in Computer Science</td>
+        </tr>
+        <tr>
+          <th>Institution:</th>
+          <td>University of the Thai Chamber of Commerce</td>
+        </tr>
+        <tr>
+          <th>Year of Graduation:</th>
+          <td>Expected 2024</td>
+        </tr>
+        <tr>
+          <th>Location:</th>
+          <td>Bangkok, Thailand</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
+
+<script>
+  function showPersonalInfo() {
+    // Hide education and show personal info
+    document.getElementById('education').style.display = 'none';
+    document.getElementById('personal-info').style.display = 'block';
+  }
+
+  function showEducation() {
+    // Hide personal info and show education
+    document.getElementById('personal-info').style.display = 'none';
+    document.getElementById('education').style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
